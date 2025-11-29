@@ -22,7 +22,7 @@ public class Main {
 
 	public Main() {
 		frame.setVisible(true);
-		frame.setSize(700, 400);
+		frame.setSize(900, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		cardPanel.add(new Home(), HOME);

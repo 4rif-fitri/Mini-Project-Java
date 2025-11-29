@@ -18,15 +18,15 @@ public class Home extends JPanel {
 		JPanel kiri = new JPanel();
 		JPanel kanan = new JPanel();
 
-		// kiri.setBackground(Color.cyan);
-		// kanan.setBackground(Color.green);
+		kiri.setBackground(Color.cyan);
+		kanan.setBackground(Color.green);
 
 		JPanel panelCenter = new JPanel();
-		// panelCenter.setBackground(Color.RED);
+		panelCenter.setBackground(Color.RED);
 		panelCenter.setPreferredSize(new Dimension(300, 300));
 
 		JPanel panelCenter2 = new JPanel();
-		// panelCenter.setBackground(Color.RED);
+		panelCenter.setBackground(Color.RED);
 		panelCenter2.setPreferredSize(new Dimension(300, 300));
 
 		JLabel label = new JLabel();
@@ -34,19 +34,16 @@ public class Home extends JPanel {
 		label.setText("");
 		panelCenter.add(label);
 
-		JLabel label2 = new JLabel();
-		JLabel label3 = new JLabel();
-		JLabel label4 = new JLabel();
-		label2.setText("Lorem ipsum dolor sit amet");
-		label3.setText("consectetur adipiscing elit, sed do eiusmod tempor");
-		label4.setText("incididunt ut labore et");
+		JLabel label2 = new JLabel("Lorem ipsum dolor sit amet");
+		JLabel label3 = new JLabel("consectetur adipiscing elit, sed do eiusmod tempor");
+		JLabel label4 = new JLabel("Lorem ipsum dolor sit amet");
 		
 		panelCenter2.add(label2);
-		panelCenter2.add(label2);
+		panelCenter2.add(label3);
 		panelCenter2.add(label4);
 
 		kanan.setLayout(new GridBagLayout());
-		kanan.add(panelCenter);
+		kanan.add(panelCenter);	
 
 		kiri.setLayout(new GridBagLayout());
 		kiri.add(panelCenter2);
