@@ -1,1 +1,2 @@
-Mini Projet yang sangat mini
+-> Mini Projet yang sangat mini
+-> <-
