@@ -18,4 +18,8 @@ public class Data {
 			ART_KLASIK.add(new Gambar("Lorem", "../img/p1.png", "IPSUM"));
 			ART_KLASIK.add(new Gambar("Lorem", "../img/p1.png", "IPSUM"));
     }
+
+	 public ArrayList<Gambar> returnData(){
+		return ART_BEARAT; //contoh
+	 }
 }

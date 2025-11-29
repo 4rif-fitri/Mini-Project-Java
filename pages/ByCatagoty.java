@@ -11,8 +11,10 @@ import java.awt.BorderLayout;
 
 import java.awt.Color;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class ByCatagoty extends JPanel {
+public class ByCatagoty extends JPanel implements ActionListener{
 	public ByCatagoty(CardLayout cardLayout, JPanel cardPanel) {
 		this.setVisible(true);
 		this.setBackground(Color.green);
@@ -41,12 +43,28 @@ public class ByCatagoty extends JPanel {
 		content.add(btn8);
 		content.add(btn9);
 
+		btn1.addActionListener(this);
+		btn2.addActionListener(this);
+		btn3.addActionListener(this);
+		btn4.addActionListener(this);
+		btn5.addActionListener(this);
+		btn6.addActionListener(this);
+		btn7.addActionListener(this);
+		btn8.addActionListener(this);
+		btn9.addActionListener(this);
+
 		this.add(new NavbarCatagory(cardLayout, cardPanel), BorderLayout.NORTH);
 		this.add(content, BorderLayout.CENTER);
 		this.add(new Footer("GALLARY", cardLayout, cardPanel), BorderLayout.SOUTH);
 
-		btn1.addActionListener(e -> {
+		// btn1.addActionListener(e -> {
+		// 	new Single("../img/p1.png");
+		// });
+
+		
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
 			new Single("../img/p1.png");
-		});
 	}
 }
