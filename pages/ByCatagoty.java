@@ -18,6 +18,7 @@ import java.awt.Dimension;
 
 public class ByCatagoty extends JPanel implements ActionListener {
 	public ByCatagoty(CardLayout cardLayout, JPanel cardPanel) {
+		
 		this.setVisible(true);
 		this.setBackground(Color.green);
 		this.setLayout(new BorderLayout());
@@ -38,14 +39,10 @@ public class ByCatagoty extends JPanel implements ActionListener {
 		this.add(scroll_conteiner, BorderLayout.CENTER);
 		this.add(new Footer("GALLARY", cardLayout, cardPanel), BorderLayout.SOUTH);
 
-		// btn1.addActionListener(e -> {
-		// new Single("../img/p1.png");
-		// });
-
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		new Single("../img/p1.png");
+		new Single("../img/3.png");
 	}
 }
