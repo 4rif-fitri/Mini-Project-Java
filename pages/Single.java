@@ -5,14 +5,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class Single extends JFrame {
-	public Single(String src) {
+	public Single(String src) { //get the url from img folder
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.setLayout(new GridLayout(2, 1));
 		this.setSize(400, 500);
 
 		JLabel label = new JLabel();
-		label.setIcon(new javax.swing.ImageIcon(getClass().getResource(src))); // NOI18N
+		label.setIcon(new javax.swing.ImageIcon(getClass().getResource(src)));
 		label.setText("");
 		this.add(label);
 
