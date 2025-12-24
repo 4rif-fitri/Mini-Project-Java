@@ -1,11 +1,11 @@
 package components;
 
 import java.awt.BorderLayout;
+import java.awt.CardLayout;
+import java.awt.event.ItemEvent;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
-import java.awt.CardLayout;
-import java.awt.event.ItemEvent;
 
 public class Navbar extends JPanel {
 	public Navbar(CardLayout cardLayout, JPanel cardPanel) {
@@ -16,7 +16,7 @@ public class Navbar extends JPanel {
 
 		JComboBox<String> nav = new JComboBox<>();
 
-		String[] items = { "Navbar", "HOME", "GALLARY" };
+		String[] items = { "Navbar", "HOME", "GALLARY", "CART" };
 		nav.setModel(new DefaultComboBoxModel<>(items));
 
 		this.add(nav, java.awt.BorderLayout.NORTH);

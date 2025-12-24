@@ -1,12 +1,10 @@
+import components.Navbar;
+import controller.Data;
+import java.awt.BorderLayout;
+import java.awt.CardLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
-
-import components.Navbar;
-
-import java.awt.BorderLayout;
-import java.awt.CardLayout;
-
 import pages.*;
 
 public class Main {
@@ -20,6 +18,9 @@ public class Main {
 	final static String CATEGORY = "CATEGORY";
 	final static String SINGLE = "SINGLE";
 
+	Data data = new Data();
+
+
 	public Main() {
 		frame.setVisible(true);
 		frame.setSize(900, 600);
@@ -27,9 +28,9 @@ public class Main {
 
 						//    panel , Key
 		cardPanel.add(new Home(), HOME); // add page home
-		cardPanel.add(new Gallary(cardLayout, cardPanel), GALLARY);
+		cardPanel.add(new GallaryAll(cardLayout, cardPanel, data), GALLARY);
 		cardPanel.add(new Category(cardLayout, cardPanel), CATEGORY);
-		cardPanel.add(new ByCatagoty(cardLayout, cardPanel), SINGLE);
+		cardPanel.add(new PictureByCategory(cardLayout, cardPanel, data), SINGLE);
 
 		cardLayout.show(cardPanel, HOME); //SHOW PANEL FUNC <===
 

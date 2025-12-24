@@ -3,31 +3,49 @@ package controller;
 import java.util.ArrayList;
 
 public class Data {
-    public ArrayList<Gambar> ART_BEARAT;
-    public ArrayList<Gambar> ART_KLASIK;
-		public ArrayList<Gambar> ART_MODEN;
+	public static ArrayList<Gambar> All = new ArrayList<>();
+	public static ArrayList<Gambar> Painting = new ArrayList<>();
+	public static ArrayList<Gambar> NFTArt = new ArrayList<>();
 
-    public Data(){
-		//Init static data
-        	ART_BEARAT = new ArrayList<>();
-        	ART_BEARAT.add(new Gambar("Lorem", "../img/p1.png", "IPSUM"));
-        	ART_BEARAT.add(new Gambar("Lorem", "../img/p1.png", "IPSUM"));
-			ART_BEARAT.add(new Gambar("Lorem", "../img/p1.png", "IPSUM"));
+	public Data() {
+		All.add(new Gambar("Lorem", "../img/3.png", "IPSUM", "Painting", 100.0));
+		All.add(new Gambar("Lorem", "../img/4.png", "IPSUM", "Painting", 100.0));
+		All.add(new Gambar("Lorem", "../img/5.png", "IPSUM", "Painting", 100.0));
 
-			ART_KLASIK = new ArrayList<>();
-			ART_KLASIK.add(new Gambar("Lorem", "../img/p1.png", "IPSUM"));
-			ART_KLASIK.add(new Gambar("Lorem", "../img/p1.png", "IPSUM"));
-			ART_KLASIK.add(new Gambar("Lorem", "../img/p1.png", "IPSUM"));
+		All.add(new Gambar("Lorem", "../img/6.png", "IPSUM", "NFT Art", 100.0));
+		All.add(new Gambar("Lorem", "../img/7.png", "IPSUM", "NFT Art", 100.0));
+		All.add(new Gambar("Lorem", "../img/8.png", "IPSUM", "NFT Art", 100.0));
+		// Init static data
 
-			//....
-			//....
-			// ....
+		// ....
+		// ....
+		// ....
 
-			// Init static data
+		// Init static data
 
-    }
+		filter();
+	}
 
-	 public ArrayList<Gambar> returnData(){ // return data base on request
-		return ART_BEARAT; //contoh
-	 }
+	public static void filter() {
+		for (Gambar item : All) {
+			if (item.catagory.equals("Painting")) {
+				Painting.add(item);
+			} else if (item.catagory.equals("NFT Art")) {
+				NFTArt.add(item);
+			}
+		}
+	}
+
+	public static ArrayList<Gambar> getPainting() {
+		return Painting;
+	}
+
+	public static ArrayList<Gambar> getNFTArt() {
+		return NFTArt;
+	}
+
+	public static ArrayList<Gambar> getAll() {
+		return All;
+	}
+
 }
