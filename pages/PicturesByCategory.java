@@ -12,9 +12,9 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import models.Gambar;
 
-public class PictureByCategory extends JPanel {
+public class PicturesByCategory extends JPanel {
 	// bagi cardpanel n cardlayout untuk bagi akses ke page lain
-	public PictureByCategory(CardLayout cardLayout, JPanel cardPanel, GambarController data) {
+	public PicturesByCategory(CardLayout cardLayout, JPanel cardPanel, GambarController data) {
 
 		this.setVisible(true);
 		this.setBackground(Color.green);

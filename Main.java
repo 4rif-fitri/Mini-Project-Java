@@ -30,7 +30,7 @@ public class Main {
 		cardPanel.add(new Home(), HOME); // add page home
 		cardPanel.add(new GallaryAll(cardLayout, cardPanel, data), GALLARY);
 		cardPanel.add(new Category(cardLayout, cardPanel), CATEGORY);
-		cardPanel.add(new PictureByCategory(cardLayout, cardPanel, data), SINGLE);
+		cardPanel.add(new PicturesByCategory(cardLayout, cardPanel, data), SINGLE);
 
 		cardLayout.show(cardPanel, HOME); //SHOW PANEL FUNC <===
 
