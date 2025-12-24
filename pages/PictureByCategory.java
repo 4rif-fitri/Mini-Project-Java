@@ -3,18 +3,18 @@ package pages;
 import components.Footer;
 import components.NavbarCatagory;
 import components.OnePicture;
-import controller.Data;
-import controller.Gambar;
+import controllers.GambarController;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import models.Gambar;
 
 public class PictureByCategory extends JPanel {
 	// bagi cardpanel n cardlayout untuk bagi akses ke page lain
-	public PictureByCategory(CardLayout cardLayout, JPanel cardPanel, Data data) {
+	public PictureByCategory(CardLayout cardLayout, JPanel cardPanel, GambarController data) {
 
 		this.setVisible(true);
 		this.setBackground(Color.green);
@@ -28,7 +28,6 @@ public class PictureByCategory extends JPanel {
 		// user click
 
 		for (Gambar item : data.getPainting()) {
-			System.out.println("lorem");
 			content.add(new OnePicture(item));
 		}
 

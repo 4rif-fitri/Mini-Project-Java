@@ -1,5 +1,5 @@
 import components.Navbar;
-import controller.Data;
+import controllers.GambarController;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import javax.swing.JFrame;
@@ -18,7 +18,7 @@ public class Main {
 	final static String CATEGORY = "CATEGORY";
 	final static String SINGLE = "SINGLE";
 
-	Data data = new Data();
+	GambarController data = new GambarController();
 
 
 	public Main() {

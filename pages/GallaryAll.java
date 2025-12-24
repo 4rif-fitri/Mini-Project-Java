@@ -1,18 +1,18 @@
 package pages;
 
 import components.*;
-import controller.Data;
-import controller.Gambar;
+import controllers.GambarController;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import models.Gambar;
 
 public class GallaryAll extends JPanel {
 	// bagi cardpanel n cardlayout untuk bagi akses ke page lain
-	public GallaryAll(CardLayout cardLayout, JPanel cardPanel, Data data) {
+	public GallaryAll(CardLayout cardLayout, JPanel cardPanel, GambarController data) {
 
 		this.setVisible(true);
 		this.setBackground(Color.BLUE);

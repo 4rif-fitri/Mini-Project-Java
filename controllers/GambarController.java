@@ -1,13 +1,14 @@
-package controller;
+package controllers;
 
 import java.util.ArrayList;
+import models.Gambar;
 
-public class Data {
+public class GambarController {
 	public static ArrayList<Gambar> All = new ArrayList<>();
 	public static ArrayList<Gambar> Painting = new ArrayList<>();
 	public static ArrayList<Gambar> NFTArt = new ArrayList<>();
 
-	public Data() {
+	public GambarController() {
 		All.add(new Gambar("Lorem", "../img/3.png", "IPSUM", "Painting", 100.0));
 		All.add(new Gambar("Lorem", "../img/4.png", "IPSUM", "Painting", 100.0));
 		All.add(new Gambar("Lorem", "../img/5.png", "IPSUM", "Painting", 100.0));

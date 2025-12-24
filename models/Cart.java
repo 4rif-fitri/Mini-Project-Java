@@ -1,4 +1,4 @@
-package controller;
+package models;
 
 public class Cart {
 	
