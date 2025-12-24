@@ -1,5 +1,6 @@
 package components;
 
+import controller.*;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -7,8 +8,6 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
-
-import controller.Gambar;
 
 public class OnePicture extends JButton {
 	public OnePicture(Gambar item){

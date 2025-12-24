@@ -1,6 +1,7 @@
 package components;
 
 import java.awt.GridLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
@@ -13,7 +14,7 @@ public class Single extends JFrame {
 		this.setLocationRelativeTo(null);
 
 		JLabel label = new JLabel();
-		label.setIcon(new javax.swing.ImageIcon(getClass().getResource(src)));
+		label.setIcon(new ImageIcon(getClass().getResource(src)));
 		label.setText("");
 		this.add(label);
 
