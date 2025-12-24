@@ -10,6 +10,7 @@ import pages.*;
 public class Main {
 
 	public JFrame frame = new JFrame();
+	
 	private CardLayout cardLayout = new CardLayout();
 	private JPanel cardPanel = new JPanel(cardLayout);
 

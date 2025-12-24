@@ -1,17 +1,45 @@
 package models;
 public class Gambar {
-	public String name;
-	public String url;
+	private int id;
+	private double price;
+	private String name;
+	private String url;
 	public String catagory;
-	public double price;
-	public String artisName;
+	private String artisName;
 
-	public Gambar(String name, String url, String artisName, String catagory, double price){
+	
+	public Gambar(int id,String name, String url, String artisName, String catagory, double price){
 		this.name = name;
 		this.url = url;
 		this.artisName = artisName;
 		this.catagory = catagory;
 		this.price = price;
+		this.id = id;
+
 	}
+	public String getCatagory() {
+		return catagory;
+	}
+
+    public String getArtisName() {
+        return artisName;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+	public String getUrl() {
+		return url;
+	}
+	
 
 }

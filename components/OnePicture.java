@@ -12,15 +12,15 @@ import models.Gambar;
 public class OnePicture extends JButton {
 	public OnePicture(Gambar item){
 			this.setPreferredSize(new Dimension(200, 250));
-			this.setIcon(new javax.swing.ImageIcon(getClass().getResource(item.url)));
+			this.setIcon(new javax.swing.ImageIcon(getClass().getResource(item.getUrl())));
 			JPanel pnl = new JPanel();
 			this.setLayout(new BorderLayout());
 			pnl.setBackground(Color.yellow);
 			pnl.setBorder(new LineBorder(Color.black, 2, true));
 			this.setBorder(new LineBorder(Color.black, 1, true));
 			JButton addToCart = new JButton("Add To Cart");
-			JLabel harga = new JLabel(item.name);
-			JLabel name = new JLabel("RM " + item.price);
+			JLabel harga = new JLabel(item.getName());
+			JLabel name = new JLabel("RM " + item.getPrice());
 			JLabel catagory = new JLabel("RM " + item.catagory);
 			pnl.add(name);
 			pnl.add(catagory);
