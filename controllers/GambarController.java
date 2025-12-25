@@ -108,4 +108,20 @@ public class GambarController {
     public ArrayList<Gambar> getTradArt() {
         return TradArt;
     }
+
+	public ArrayList<Gambar> getArtByCat(String cat){
+		switch (cat){
+			case "Painting": return getPainting();
+			//sculpture
+			case "NFT Art": return getNFTArt();
+			case "Drawing": return getDrawing();
+			case "Photography": return getPhotography();
+			case "Abstract Art": return getAbstractArt();
+			case "Pop Art": return getPopArt();
+			case "Digital Art": return getDigiArt();
+			case "Traditional Art": return getTradArt();
+			default: return getAll();
+		}
+		
+	}
 }

@@ -5,6 +5,7 @@ import java.awt.CardLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
+import models.GlobalData;
 import pages.*;
 
 //main mian main main
@@ -21,17 +22,25 @@ public class Main {
 	final static String SINGLE = "SINGLE";
 	GambarController data = new GambarController();
 
-
 	public Main() {
 		frame.setVisible(true);
 		frame.setSize(900, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+		GlobalData globalData = new GlobalData(cardLayout, cardPanel);
+		
+		Home home = new Home();
+		GallaryAll gallaryAll = new GallaryAll(cardLayout, cardPanel, data);
+		Category category = new Category(globalData);
+		PicturesByCategory picturesByCategory = new PicturesByCategory(data, globalData);
+
+		globalData.updateAlamatOfPages(category, picturesByCategory);
+		
 						//    panel , Key
-		cardPanel.add(new Home(), HOME); // add page home
-		cardPanel.add(new GallaryAll(cardLayout, cardPanel, data), GALLARY);
-		cardPanel.add(new Category(cardLayout, cardPanel), CATEGORY);
-		cardPanel.add(new PicturesByCategory(cardLayout, cardPanel, data), SINGLE);
+		cardPanel.add(home, HOME); // add page home
+		cardPanel.add(gallaryAll, GALLARY);
+		cardPanel.add(category, CATEGORY);
+		cardPanel.add(picturesByCategory, SINGLE);
 
 		cardLayout.show(cardPanel, HOME); //SHOW PANEL FUNC <===
 
