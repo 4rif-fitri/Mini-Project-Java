@@ -7,6 +7,14 @@ public class GambarController {
 	private ArrayList<Gambar> All = new ArrayList<>();
 	private ArrayList<Gambar> Painting = new ArrayList<>();
 	private ArrayList<Gambar> NFTArt = new ArrayList<>();
+	private ArrayList<Gambar> Drawing=new ArrayList<>();
+	private ArrayList<Gambar> Photography=new ArrayList<>();
+	private ArrayList<Gambar> AbstractArt=new ArrayList<>();
+	private ArrayList<Gambar> PopArt=new ArrayList<>();
+	private ArrayList<Gambar> DigiArt=new ArrayList<>();
+	private ArrayList<Gambar> TradArt=new ArrayList<>();
+
+	
 
 	public GambarController() {
 		// Init static data
@@ -33,7 +41,20 @@ public class GambarController {
 				Painting.add(item);
 			} else if (item.getCatagory().equals("NFT Art")) {
 				NFTArt.add(item);
-			}
+			} else if (item.getCatagory().equals("Drawing")) {
+                Drawing.add(item);
+            } else if (item.getCatagory().equals("Photography")) {
+                Photography.add(item);
+            } else if (item.getCatagory().equals("Abstract Art")) {
+                AbstractArt.add(item);
+            } else if (item.getCatagory().equals("Pop Art")) {
+                PopArt.add(item);
+            } else if (item.getCatagory().equals("Digital Art")) {
+                DigiArt.add(item);
+            } else if (item.getCatagory().equals("Traditional Art")) {
+                TradArt.add(item);
+            }
+			
 		}
 	}
 
@@ -49,4 +70,27 @@ public class GambarController {
 		return All;
 	}
 
+	public ArrayList<Gambar> getDrawing() {
+        return Drawing;
+    }
+
+    public ArrayList<Gambar> getPhotography() {
+        return Photography;
+    }
+
+    public ArrayList<Gambar> getAbstractArt() {
+        return AbstractArt;
+    }
+
+    public ArrayList<Gambar> getPopArt() {
+        return PopArt;
+    }
+
+    public ArrayList<Gambar> getDigiArt() {
+        return DigiArt;
+    }
+
+    public ArrayList<Gambar> getTradArt() {
+        return TradArt;
+    }
 }
