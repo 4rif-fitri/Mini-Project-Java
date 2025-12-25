@@ -19,7 +19,9 @@ public class GlobalData {
         this.cardPanel = cardPanel;
     }
 
-    public void updateAlamatOfPages(Category category, PicturesByCategory byCategroy){
+    public void updateAlamatOfPages(Home home, GallaryAll gallaryAll, Category category, PicturesByCategory byCategroy){
+        this.home = home;
+        this.gallaryAll = gallaryAll;
         this.category = category;
         this.picturesByCategory = byCategroy;
     }

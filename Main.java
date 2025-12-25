@@ -34,7 +34,7 @@ public class Main {
 		Category category = new Category(globalData);
 		PicturesByCategory picturesByCategory = new PicturesByCategory(data, globalData);
 
-		globalData.updateAlamatOfPages(category, picturesByCategory);
+		globalData.updateAlamatOfPages(home, gallaryAll, category, picturesByCategory);
 		
 						//    panel , Key
 		cardPanel.add(home, HOME); // add page home
