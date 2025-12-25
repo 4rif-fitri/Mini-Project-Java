@@ -20,6 +20,7 @@ public class Category extends JPanel {
 		content.setLayout(new GridLayout(3, 3));
 
 		//buat loop plss n bile user click btn akan ade data kategory apa dihantar ke ByCatagory.java tuk loop data
+		// for loop insyaallah
 		JButton btn1 = new JButton("Painting ");
 		JButton btn2 = new JButton("Drawing");
 		JButton btn3 = new JButton("Sculpture");
