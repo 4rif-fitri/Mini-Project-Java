@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import models.Gambar;
 
 public class GambarController {
-	public static ArrayList<Gambar> All = new ArrayList<>();
-	public static ArrayList<Gambar> Painting = new ArrayList<>();
-	public static ArrayList<Gambar> NFTArt = new ArrayList<>();
+	private ArrayList<Gambar> All = new ArrayList<>();
+	private ArrayList<Gambar> Painting = new ArrayList<>();
+	private ArrayList<Gambar> NFTArt = new ArrayList<>();
 
 	public GambarController() {
 		// Init static data
@@ -27,7 +27,7 @@ public class GambarController {
 		filter();
 	}
 
-	public static void filter() {
+	public void filter() {
 		for (Gambar item : All) {
 			if (item.getCatagory().equals("Painting")) {
 				Painting.add(item);
@@ -37,15 +37,15 @@ public class GambarController {
 		}
 	}
 
-	public static ArrayList<Gambar> getPainting() {
+	public ArrayList<Gambar> getPainting() {
 		return Painting;
 	}
 
-	public static ArrayList<Gambar> getNFTArt() {
+	public ArrayList<Gambar> getNFTArt() {
 		return NFTArt;
 	}
 
-	public static ArrayList<Gambar> getAll() {
+	public  ArrayList<Gambar> getAll() {
 		return All;
 	}
 
