@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import pages.*;
 
+//main mian main main
 public class Main {
 
 	public JFrame frame = new JFrame();
@@ -18,7 +19,6 @@ public class Main {
 	final static String GALLARY = "GALLARY";
 	final static String CATEGORY = "CATEGORY";
 	final static String SINGLE = "SINGLE";
-//main
 	GambarController data = new GambarController();
 
 
