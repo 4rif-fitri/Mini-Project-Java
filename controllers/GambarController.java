@@ -29,12 +29,18 @@ public class GambarController {
 		All.add(new Gambar(9,"Lorem", "../img/self-portrait_1998.74.5.jpg", "IPSUM", "Painting", 100.0));
 		All.add(new Gambar(10,"Lorem", "../img/the_house_of_representatives_2014.79.27.jpg", "IPSUM", "Painting", 100.0));
 		All.add(new Gambar(11,"Lorem", "../img/woman_with_a_parasol_-_madame_monet_and_her_son_1983.1.29.jpg", "IPSUM", "Painting", 100.0));
-
-
-		All.add(new Gambar(4,"Lorem", "../img/6.png", "IPSUM", "NFT Art", 100.0));
-		All.add(new Gambar(5,"Lorem", "../img/7.png", "IPSUM", "NFT Art", 100.0));
-		All.add(new Gambar(6,"Lorem", "../img/8.png", "IPSUM", "NFT Art", 100.0));
-
+		All.add(new Gambar(12,"Lorem", "../img/6.png", "IPSUM", "NFT Art", 100.0));
+		All.add(new Gambar(13,"Lorem", "../img/7.png", "IPSUM", "NFT Art", 100.0));
+		All.add(new Gambar(14,"Lorem", "../img/8.png", "IPSUM", "NFT Art", 100.0));
+		All.add(new Gambar(15,"Lorem", "../img/pexels-daniel-miller-2106839-35064002.jpg", "IPSUM", "Photography", 100.0));
+		All.add(new Gambar(16,"Lorem", "../img/pexels-eberhardgross-35229930.jpg", "IPSUM", "Photography", 100.0));
+		All.add(new Gambar(17,"Lorem", "../img/pexels-eva-hamitaj-181569841-16059523.jpg", "IPSUM", "Photography", 100.0));
+		All.add(new Gambar(18,"Lorem", "../img/pexels-joseph-hamdy-2158299402-35288906.jpg", "IPSUM", "Photography", 100.0));
+		All.add(new Gambar(19,"Lorem", "../img/pexels-misa-s-60335324-28839480.jpg", "IPSUM", "Photography", 100.0));
+		All.add(new Gambar(20,"Lorem", "../img/pexels-simon73-30372194.jpg", "IPSUM", "Photography", 100.0));
+		All.add(new Gambar(21,"Lorem", "../img/pexels-sylwester-ficek-154797634-18478307.jpg", "IPSUM", "Photography", 100.0));
+		All.add(new Gambar(22,"Lorem", "../img/pexels-urtimud-89-76108288-35116876.jpg", "IPSUM", "Photography", 100.0));
+		All.add(new Gambar(23,"Lorem", "../img/pexels-yenderfonseca-35025884.jpg", "IPSUM", "Photography", 100.0));		
 		// ....
 		// ....
 		// ....
