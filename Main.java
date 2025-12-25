@@ -18,7 +18,7 @@ public class Main {
 	final static String GALLARY = "GALLARY";
 	final static String CATEGORY = "CATEGORY";
 	final static String SINGLE = "SINGLE";
-
+//main
 	GambarController data = new GambarController();
 
 
