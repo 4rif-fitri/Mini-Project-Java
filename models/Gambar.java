@@ -47,7 +47,7 @@ public class Gambar  {
 	public void sendWhatsApp() {
 		try {
 			String phone = "60197231577";
-			String msg = "Hai saya nak tanya pasal rrrproduk: " + name;
+			String msg = "Hai saya nak tanyfgdfgfdga pasal rrrproduk: " + name;
 
 			String link = "https://wa.me/" + phone +
 					"?text=" + URLEncoder.encode(msg, "UTF-8");
