@@ -4,10 +4,9 @@ public class Gambar {
 	private double price;
 	private String name;
 	private String url;
-	public String catagory;
+	private String catagory;
 	private String artisName;
 
-	
 	public Gambar(int id,String name, String url, String artisName, String catagory, double price){
 		this.name = name;
 		this.url = url;
@@ -15,8 +14,8 @@ public class Gambar {
 		this.catagory = catagory;
 		this.price = price;
 		this.id = id;
-
 	}
+	
 	public String getCatagory() {
 		return catagory;
 	}

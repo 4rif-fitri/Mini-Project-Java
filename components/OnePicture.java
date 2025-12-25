@@ -21,7 +21,7 @@ public class OnePicture extends JButton {
 			JButton addToCart = new JButton("Add To Cart");
 			JLabel harga = new JLabel(item.getName());
 			JLabel name = new JLabel("RM " + item.getPrice());
-			JLabel catagory = new JLabel("RM " + item.catagory);
+			JLabel catagory = new JLabel("RM " + item.getCatagory());
 			pnl.add(name);
 			pnl.add(catagory);
 			pnl.add(harga);
