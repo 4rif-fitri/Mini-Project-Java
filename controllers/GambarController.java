@@ -9,6 +9,7 @@ public class GambarController {
 	public static ArrayList<Gambar> NFTArt = new ArrayList<>();
 
 	public GambarController() {
+		// Init static data
 		All.add(new Gambar(1,"Lorem", "../img/3.png", "IPSUM", "Painting", 100.0));
 		All.add(new Gambar(2,"Lorem", "../img/4.png", "IPSUM", "Painting", 100.0));
 		All.add(new Gambar(3,"Lorem", "../img/5.png", "IPSUM", "Painting", 100.0));
@@ -16,7 +17,6 @@ public class GambarController {
 		All.add(new Gambar(4,"Lorem", "../img/6.png", "IPSUM", "NFT Art", 100.0));
 		All.add(new Gambar(5,"Lorem", "../img/7.png", "IPSUM", "NFT Art", 100.0));
 		All.add(new Gambar(6,"Lorem", "../img/8.png", "IPSUM", "NFT Art", 100.0));
-		// Init static data
 
 		// ....
 		// ....

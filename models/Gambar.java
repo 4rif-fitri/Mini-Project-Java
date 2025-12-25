@@ -1,5 +1,9 @@
 package models;
-public class Gambar {
+
+import java.awt.Desktop;
+import java.net.URI;
+import java.net.URLEncoder;
+public class Gambar  {
 	private int id;
 	private double price;
 	private String name;
@@ -38,6 +42,20 @@ public class Gambar {
 
 	public String getUrl() {
 		return url;
+	}
+
+	public void sendWhatsApp() {
+		try {
+			String phone = "60197231577";
+			String msg = "Hai saya nak tanya pasal produk: " + name;
+
+			String link = "https://wa.me/" + phone +
+					"?text=" + URLEncoder.encode(msg, "UTF-8");
+
+			Desktop.getDesktop().browse(new URI(link));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 

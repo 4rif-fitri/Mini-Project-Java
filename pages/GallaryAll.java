@@ -29,13 +29,13 @@ public class GallaryAll extends JPanel {
 		for (Gambar item : data.getAll()) {
 			content.add(new OnePicture(item));
 		}
-		// // bagi main container ade scroll
+		// bagi main container ade scroll
 		JScrollPane scroll_conteiner = new JScrollPane(content);
 
 		// layout setting
-		this.add(new NavbarCatagory(cardLayout, cardPanel), java.awt.BorderLayout.NORTH);
-		this.add(scroll_conteiner, java.awt.BorderLayout.CENTER);
-		this.add(new Footer("HOME", cardLayout, cardPanel), java.awt.BorderLayout.SOUTH);
+		this.add(new NavbarCatagory(cardLayout, cardPanel), BorderLayout.NORTH);
+		this.add(scroll_conteiner, BorderLayout.CENTER);
+		this.add(new Footer("HOME", cardLayout, cardPanel), BorderLayout.SOUTH);
 		// layout setting
 
 	}
