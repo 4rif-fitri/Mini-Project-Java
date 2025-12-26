@@ -33,6 +33,7 @@ public class Main {
 		GallaryAll gallaryAll = new GallaryAll(cardLayout, cardPanel, data);
 		Category category = new Category(globalData);
 		PicturesByCategory picturesByCategory = new PicturesByCategory(data, globalData);
+		CartPage cartPage = new CartPage()
 
 		globalData.updateAlamatOfPages(category, picturesByCategory);
 		
@@ -41,6 +42,7 @@ public class Main {
 		cardPanel.add(gallaryAll, GALLARY);
 		cardPanel.add(category, CATEGORY);
 		cardPanel.add(picturesByCategory, SINGLE);
+		cardPanel.add()
 
 		cardLayout.show(cardPanel, HOME); //SHOW PANEL FUNC <===
 
