@@ -17,8 +17,8 @@ public class OnePicture extends JButton {
 		this.setLayout(new BorderLayout());
 		
 		JPanel pnl = new JPanel();
-		pnl.setBackground(Color.yellow);
-		pnl.setBorder(new LineBorder(Color.black, 2, true));
+		pnl.setBackground(Color.decode("#d9d9d9"));
+		//pnl.setBorder(new LineBorder(Color.black, 2, true));
 
 		JButton addToCart = new JButton("Add To Cart");
 		JLabel harga = new JLabel(item.getName());
