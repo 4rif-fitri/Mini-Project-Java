@@ -34,6 +34,7 @@ public class GallaryAll extends JPanel {
 		}
 		// bagi main container ade scroll
 		JScrollPane scroll_conteiner = new JScrollPane(content);
+		scroll_conteiner.getVerticalScrollBar().setUnitIncrement(20);
 
 		// layout setting
 		this.add(new NavbarCatagory(cardLayout, cardPanel), BorderLayout.NORTH);
