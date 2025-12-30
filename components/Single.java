@@ -47,44 +47,41 @@ public class Single extends JFrame {
 		JPanel panelDesc = new JPanel();
 		panelDesc.setLayout(new BorderLayout());
 
+			JPanel panel1 = new JPanel();
+			panel1.setLayout(new GridLayout(2, 1));
+				JLabel title = new JLabel(item.getName());
+				title.setFont(new Font("Ariel", Font.BOLD, 27));
+				JLabel category = new JLabel(item.getCatagory());
+			panel1.add(title);
+			panel1.add(category);
 
-		//ADE TITLE====================================================================
-		JLabel title = new JLabel("Pizza on a Cup");
-		title.setFont(new Font("Ariel", Font.BOLD, 27));
-
-
-		//Ade CATEGORY, HARGA, CART BUTTON=====================================================================
-		JPanel panelKiriDesc = new JPanel();
-		panelKiriDesc.setLayout(new GridLayout(3, 1));
-		panelKiriDesc.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-		JLabel category = new JLabel(item.getCatagory());
-		JLabel harga = new JLabel("RM " + item.getPrice());
-		JButton addToCart = new JButton("Add To Cart");
-		//addToCart.setPreferredSize(new Dimension(80, 10));
-		panelKiriDesc.add(category);
-		panelKiriDesc.add(harga);
-		panelKiriDesc.add(addToCart);
-
-
-		//ADE DESCRIPTION PUNYE TEXT======================================================================
-		JTextArea desc = new JTextArea(
-			"You see, pizza usually put on a plate or a flat board. " +
-			"But this..this is masterpiece. This is truly out of this " + 
-			"world. No camparison. Lets add more line to do some experiments"
-		);
-		desc.setPreferredSize(new Dimension(368, 100));
-		desc.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-		//desc.setBackground(Color.decode("#eeeeee"));
-		desc.setEditable(false);
-		desc.setFocusable(false); // optional
-		desc.setLineWrap(true);
-		desc.setWrapStyleWord(true);
+			JPanel panel2 = new JPanel();
+				//ADE DESCRIPTION PUNYE TEXT======================================================================
+				JTextArea desc = new JTextArea(
+					"You see, pizza usually put on a plate or a flat board. " +
+					"But this..this is masterpiece. This is truly out of this " + 
+					"world. No camparison. Lets add more line to do some experiments"
+				);
+				desc.setPreferredSize(new Dimension(width * 6/10, height));
+				desc.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+				//desc.setBackground(Color.decode("#eeeeee"));
+				desc.setEditable(false);
+				desc.setFocusable(false); // optional
+				desc.setLineWrap(true);
+				desc.setWrapStyleWord(true);
+			panel2.add(desc);
+			JPanel panel3 = new JPanel();
+			panel3.setLayout(new GridLayout(1, 2));
+				JLabel price = new JLabel("RM " + item.getPrice());
+				JButton addToCart = new JButton("Add To Cart");
+			panel3.add(price);
+			panel3.add(addToCart);
 
 
 		//LETAK SEMUA BENDA KAT PANEL DESCRIPTION======================================================================
-		panelDesc.add(title, BorderLayout.NORTH);
-		panelDesc.add(panelKiriDesc, BorderLayout.WEST);
-		panelDesc.add(desc, BorderLayout.SOUTH);
+		panelDesc.add(panel1, BorderLayout.NORTH);
+		panelDesc.add(panel2, BorderLayout.CENTER);
+		panelDesc.add(panel3, BorderLayout.SOUTH);
 		//this.add(label2);
 
 
