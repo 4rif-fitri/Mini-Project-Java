@@ -43,7 +43,6 @@ public class Category extends JPanel implements ActionListener{
 	}
 
 	public void actionPerformed(ActionEvent e){
-		System.out.println("Action command string: " + e.getActionCommand());
 		GD.sendSelectedCategory(e.getActionCommand());
 		GD.cardLayout.show(GD.cardPanel, "SINGLE");
 	}
