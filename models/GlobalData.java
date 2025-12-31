@@ -4,7 +4,8 @@ import javax.swing.JPanel;
 import pages.*;
 
 public class GlobalData {
-    public final static int gap = 24;
+    public final static int W = 960;
+    public final static int H = 540;
     
     private CartPage cartPage;
     private Category category;

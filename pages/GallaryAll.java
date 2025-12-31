@@ -10,24 +10,25 @@ import java.awt.GridLayout;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import models.Gambar;
+import models.*;
+
 
 public class GallaryAll extends JPanel {
-	public final static int gap = 48;
+	public final static int GAP = 48;
 	// bagi cardpanel n cardlayout untuk bagi akses ke page lain
 	public GallaryAll(CardLayout cardLayout, JPanel cardPanel, GambarController data) {
-		this.setPreferredSize(new Dimension(960, 540));
+		this.setPreferredSize(new Dimension(GlobalData.W, GlobalData.H));
 		this.setVisible(true);
 		this.setBackground(Color.BLUE);
 		this.setLayout(new BorderLayout());
 
 		// main container
 		JPanel content = new JPanel();
-		content.setBorder(BorderFactory.createEmptyBorder(gap, gap, gap, gap));
+		content.setBorder(BorderFactory.createEmptyBorder(GAP, GAP, GAP, GAP));
 		content.setBackground(Color.WHITE);
 
 		// main container ~ grid layout only 3 col n infinity row
-		content.setLayout(new GridLayout(0, 3, gap, gap));
+		content.setLayout(new GridLayout(0, 3, GAP, GAP));
 
 		for (Gambar item : data.getAll()) {
 			content.add(new OnePicture(item));

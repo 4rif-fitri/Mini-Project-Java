@@ -42,6 +42,7 @@ public class Category extends JPanel implements ActionListener{
 		// layout setting
 	}
 
+	@Override
 	public void actionPerformed(ActionEvent e){
 		GD.sendSelectedCategory(e.getActionCommand());
 		GD.cardLayout.show(GD.cardPanel, "SINGLE");
