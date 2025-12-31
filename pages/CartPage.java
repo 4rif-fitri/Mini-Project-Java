@@ -4,13 +4,15 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Font;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import models.GlobalData;
+import models.*;
 
 public class CartPage extends JPanel {
         private GlobalData GD;
@@ -34,6 +36,28 @@ public class CartPage extends JPanel {
                     JPanel box = new JPanel();
                     box.setBackground(Color.decode("#d9d9d9"));
                     box.setPreferredSize(new Dimension(GD.W * 8/10, HBOX));
+                    box.setLayout(new BorderLayout());
+                    box.setBorder(BorderFactory.createLineBorder(Color.decode("#b02323"), 2));
+                        JPanel panelWestBox = new JPanel();
+                        panelWestBox.setBackground(Color.decode("#d9d9d9"));
+                        panelWestBox.setPreferredSize(new Dimension(GlobalData.W * 7/10, HBOX));
+                        panelWestBox.setLayout(new GridLayout(3, 1));
+                        panelWestBox.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+                            JLabel title = new JLabel("Pizza on a cup");
+                            title.setFont(new Font("Ariel", Font.BOLD, 27));
+                            JLabel category = new JLabel("Painting");
+                            JLabel price = new JLabel("RM 10.00");
+                        panelWestBox.add(title);
+                        panelWestBox.add(category);
+                        panelWestBox.add(price);
+                        JPanel panelEastBox = new JPanel();
+                        panelEastBox.setBackground(Color.decode("#d9d9d9"));
+                        panelEastBox.setLayout(new GridBagLayout());
+                            JButton removeBtn = new JButton("remove");
+                        panelEastBox.add(removeBtn);
+                        panelEastBox.setPreferredSize(new Dimension(GlobalData.W * 1/10, HBOX));
+                    box.add(panelWestBox, BorderLayout.CENTER);
+                    box.add(panelEastBox, BorderLayout.EAST);
 
                     JPanel box1 = new JPanel();
                     box1.setBackground(Color.decode("#d9d9d9"));
