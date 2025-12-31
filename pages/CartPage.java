@@ -7,14 +7,17 @@ import java.awt.GridLayout;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import models.GlobalData;
 
 public class CartPage extends JPanel {
+        private GlobalData GD;
         public final static int width = 960;
         public final static int height = 540;
         public final static int gap = 24;
         public final static int something = 100;
 
-        public CartPage(){
+        public CartPage(GlobalData globalData){
+            this.GD = globalData;
             this.setVisible(true);
             this.setBackground(Color.BLUE);
             this.setPreferredSize(new Dimension(width, height));
