@@ -19,9 +19,6 @@ public class GambarController {
 
 	public GambarController() {
 		// Init static data
-		All.add(new Gambar(1, "Sunset Bliss", "../img/3.png", "Alice Wonder", "Painting", 150.0));
-		All.add(new Gambar(2, "Silent Hill", "../img/4.png", "Bob Rossy", "Painting", 200.50));
-		All.add(new Gambar(3, "Golden Hour", "../img/5.png", "Jane Doe", "Painting", 125.75));
 		All.add(new Gambar(4, "Lacquer Vat", "../img/pnt/_japan_lacquer_dipping_vat_1947.1.27.jpg", "Hokusai School", "Painting", 5000.0));
 		All.add(new Gambar(5, "Cigar Store Indian", "../img/pnt/cigar_store_indian_1943.8.10087.jpg", "Vintage Anon", "Painting", 300.0));
 		All.add(new Gambar(6, "Rustic Cupboard", "../img/pnt/cupboard_1943.8.7897.jpg", "Carpenter Joe", "Painting", 450.0));
@@ -30,9 +27,6 @@ public class GambarController {
 		All.add(new Gambar(9, "Self Reflection", "../img/pnt/self-portrait_1998.74.5.jpg", "Van Goghish", "Painting", 10000.0));
 		All.add(new Gambar(10, "House of Reps", "../img/pnt/the_house_of_representatives_2014.79.27.jpg", "Samuel Morse", "Painting", 25000.0));
 		All.add(new Gambar(11, "Woman with Parasol", "../img/pnt/woman_with_a_parasol_-_madame_monet_and_her_son_1983.1.29.jpg", "Claude Monet", "Painting", 45000.0));
-		All.add(new Gambar(12,"Lorem", "../img/6.png", "IPSUM", "NFT Art", 100.0));
-		All.add(new Gambar(13,"Lorem", "../img/7.png", "IPSUM", "NFT Art", 100.0));
-		All.add(new Gambar(14,"Lorem", "../img/8.png", "IPSUM", "NFT Art", 100.0));
 		All.add(new Gambar(15, "Urban Shadows", "../img/pht/pexels-daniel-miller-2106839-35064002.jpg", "Daniel Miller", "Photography", 350.0));
 		All.add(new Gambar(16, "Mountain Peak", "../img/pht/pexels-eberhardgross-35229930.jpg", "Eberhard Gross", "Photography", 420.0));
 		All.add(new Gambar(17, "City Lights", "../img/pht/pexels-eva-hamitaj-181569841-16059523.jpg", "Eva Hamitaj", "Photography", 299.99));
