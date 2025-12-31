@@ -10,7 +10,7 @@ import models.Cart;
 public class Footer extends JPanel {
 	public Footer(String location, CardLayout cardLayout, JPanel cardPanel) {
 		this.setVisible(true);
-		this.setBackground(Color.yellow);
+		this.setBackground(Color.decode("#b02323"));
 		this.setLayout(new FlowLayout(FlowLayout.LEFT));
 
 		JButton btn_back = new JButton("BACK");

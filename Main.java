@@ -20,6 +20,7 @@ public class Main {
 	final static String GALLARY = "GALLARY";
 	final static String CATEGORY = "CATEGORY";
 	final static String SINGLE = "SINGLE";
+	final static String CART = "CART";
 	GambarController data = new GambarController();
 
 	public Main() {
@@ -33,6 +34,7 @@ public class Main {
 		GallaryAll gallaryAll = new GallaryAll(cardLayout, cardPanel, data);
 		Category category = new Category(globalData);
 		PicturesByCategory picturesByCategory = new PicturesByCategory(data, globalData);
+		CartPage cartPage = new CartPage(globalData);
 
 		globalData.updateAlamatOfPages(home, gallaryAll, category, picturesByCategory);
 		
@@ -41,6 +43,7 @@ public class Main {
 		cardPanel.add(gallaryAll, GALLARY);
 		cardPanel.add(category, CATEGORY);
 		cardPanel.add(picturesByCategory, SINGLE);
+		cardPanel.add(cartPage, CART);
 
 		cardLayout.show(cardPanel, HOME); //SHOW PANEL FUNC <===
 

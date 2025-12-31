@@ -2,6 +2,7 @@ package components;
 
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
+import java.awt.Dimension;
 import java.awt.event.ItemEvent;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
@@ -12,14 +13,14 @@ public class Navbar extends JPanel {
 
 		this.setVisible(true);
 		this.setLayout(new BorderLayout());
-		this.setSize(700, 400);
 
 		JComboBox<String> nav = new JComboBox<>();
+		nav.setPreferredSize(new Dimension(960, 27));
 
 		String[] items = { "Navbar", "HOME", "GALLARY", "CART" };
 		nav.setModel(new DefaultComboBoxModel<>(items));
 
-		this.add(nav, java.awt.BorderLayout.NORTH);
+		this.add(nav, BorderLayout.NORTH);
 
 		// event listener
 
