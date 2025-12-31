@@ -9,6 +9,7 @@ import models.GlobalData;
 import pages.*;
 
 //main mian main main
+//this is imran speaking
 public class Main {
 
 	public JFrame frame = new JFrame();
