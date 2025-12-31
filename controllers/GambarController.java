@@ -13,6 +13,7 @@ public class GambarController {
 	private ArrayList<Gambar> PopArt=new ArrayList<>();
 	private ArrayList<Gambar> DigiArt=new ArrayList<>();
 	private ArrayList<Gambar> TradArt=new ArrayList<>();
+	private ArrayList<Gambar> Sculpture=new ArrayList<>();
 
 	
 
@@ -88,7 +89,11 @@ public class GambarController {
 		All.add(new Gambar(68, "Lyanna", "../img/dga/mintautas-sukys-lyanna.jpg", "Mintautas S.", "Digital Art", 700.0));
 		All.add(new Gambar(69, "Stag & Wolf", "../img/dga/mintautas-sukys-stag-and-direwolf.jpg", "Mintautas S.", "Digital Art", 750.0));
 		All.add(new Gambar(70, "Future City", "../img/dga/V9mhxs7dovfyY8WXTCUQdJ.jpg", "City Scaper", "Digital Art", 450.0));
-		All.add(new Gambar(71, "Victoria Sphere", "../img/dga/victoria-3-sphere-of-influence-key-art.jpg", "Paradox", "Digital Art", 900.0));	
+		All.add(new Gambar(71, "Victoria Sphere", "../img/dga/victoria-3-sphere-of-influence-key-art.jpg", "Paradox", "Digital Art", 900.0));
+		All.add(new Gambar(72, "Eternal Silence", "../img/scp/61g3DeXSFmL._AC_UF894,1000_QL80_.jpg", "Stone Mason", "Sculpture", 1450.0));
+		All.add(new Gambar(73, "Modern Twist", "../img/scp/grizi-1.jpg", "Artie Choke", "Sculpture", 920.50));
+		All.add(new Gambar(74, "Porcelain Myth", "../img/scp/Harpy-2018-porcelain-scaled.jpg", "Clay Master", "Sculpture", 2100.0));
+		All.add(new Gambar(75, "Golden Figure", "../img/scp/s-l1200.jpg", "Gilty Pleasure", "Sculpture", 1150.75));
 		// ....
 		// ....
 		// ....
@@ -116,8 +121,10 @@ public class GambarController {
                 DigiArt.add(item);
             } else if (item.getCatagory().equals("Traditional Art")) {
                 TradArt.add(item);
+            } else if (item.getCatagory().equals("Sculpture")) {
+                Sculpture.add(item);
             }
-			
+
 		}
 	}
 
@@ -156,4 +163,7 @@ public class GambarController {
     public ArrayList<Gambar> getTradArt() {
         return TradArt;
     }
+	public ArrayList<Gambar> getSculpture() {
+		return Sculpture;
+	}
 }
