@@ -13,6 +13,8 @@ public class GambarController {
 	private ArrayList<Gambar> PopArt=new ArrayList<>();
 	private ArrayList<Gambar> DigiArt=new ArrayList<>();
 	private ArrayList<Gambar> TradArt=new ArrayList<>();
+	private ArrayList<Gambar> Sculpture=new ArrayList<>();
+
 
 	
 
@@ -68,8 +70,9 @@ public class GambarController {
                 DigiArt.add(item);
             } else if (item.getCatagory().equals("Traditional Art")) {
                 TradArt.add(item);
-            }
-			
+            } else if (item.getCatagory().equals("Sculpture")) {
+                Sculpture.add(item);
+			}
 		}
 	}
 
@@ -108,6 +111,9 @@ public class GambarController {
     public ArrayList<Gambar> getTradArt() {
         return TradArt;
     }
+	    public ArrayList<Gambar> getSculpture() {
+        return Sculpture;
+    }
 
 	public ArrayList<Gambar> getArtByCat(String cat){
 		switch (cat){
@@ -120,6 +126,7 @@ public class GambarController {
 			case "Pop Art": return getPopArt();
 			case "Digital Art": return getDigiArt();
 			case "Traditional Art": return getTradArt();
+			case "Sculpture": return getSculpture();
 			default: return getAll();
 		}
 		
