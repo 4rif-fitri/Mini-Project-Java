@@ -2,7 +2,7 @@ package models;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 import pages.*;
-
+//asd
 public class GlobalData {
     private CartPage cartPage;
     private Category category;
