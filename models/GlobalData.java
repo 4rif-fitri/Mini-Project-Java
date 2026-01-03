@@ -35,4 +35,8 @@ public class GlobalData {
     public static void sendToCart(Gambar gambar){
         CartController.addToCart(gambar);
     }
+
+    public static void updateCart(){
+        CartPage.loadCartPage();
+    }
 }

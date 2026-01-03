@@ -12,7 +12,7 @@ public class CartBox extends JPanel{
     public final static int GAP = 24;
     public final static int HBOX = 100;
 
-    public CartBox() {
+    public CartBox(Gambar item) {
         this.setVisible(true);
         this.setBackground(Color.decode("#d9d9d9"));
         this.setPreferredSize(new Dimension(GD.W * 8/10, HBOX));

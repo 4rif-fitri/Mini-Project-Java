@@ -19,6 +19,8 @@ public class CartPage extends JPanel {
         private GlobalData GD;
         public final static int GAP = 24;
         public final static int HBOX = 100;
+        static JPanel content = new JPanel();
+        static JLabel totalPrice = new JLabel();
 
         public CartPage(GlobalData globalData){
             this.GD = globalData;
@@ -27,21 +29,13 @@ public class CartPage extends JPanel {
             this.setPreferredSize(new Dimension(GD.W, GD.H));
             this.setLayout(new BorderLayout());
 
-                JPanel content = new JPanel();
+                
                 content.setBackground(Color.white);
                 content.setLayout(new GridLayout(0, 1, GAP, GAP));
                 content.setBorder(BorderFactory.createEmptyBorder(GAP, GAP, GAP, GAP));
                 //content.setBorder(BorderFactory.);
 
-                    for (Gambar item : CartController.getCart()) {
-			            //content.add(new modelboximran(item));
-		            }
-
-                //ade tak ni
-                content.add(new CartBox());
-                content.add(new CartBox());
-                content.add(new CartBox());
-                content.add(new CartBox());
+                    
                 
                 JScrollPane scroll_container = new JScrollPane(content);
                 scroll_container.getVerticalScrollBar().setUnitIncrement(20);
@@ -50,7 +44,6 @@ public class CartPage extends JPanel {
                 panelCheckOut.setBackground(Color.decode("#b02323"));
                 panelCheckOut.setPreferredSize(new Dimension(GD.W, 50));
                 panelCheckOut.setLayout(new FlowLayout(FlowLayout.RIGHT));
-                    JLabel totalPrice = new JLabel("RM " + getCartTotal());
                     totalPrice.setForeground(Color.white);
                     JButton buttonCheckOut = new JButton("CheckOut");
                 panelCheckOut.add(totalPrice);
@@ -63,8 +56,17 @@ public class CartPage extends JPanel {
                 
             
         }
+
+    public static void loadCartPage(){
+        content.removeAll();
+        for (Gambar item : CartController.getCart()) {
+			content.add(new CartBox(item));
+		}
+        totalPrice.setText("RM " + getCartTotal());
+
+    }
     
-    private double getCartTotal(){
+    private static double getCartTotal(){
         double total = 0;
         for (Gambar item : CartController.getCart()) {
             total += item.getPrice();
