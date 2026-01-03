@@ -8,5 +8,10 @@ public class CartController {
 
     public static void addToCart(Gambar item){
         shoppingCart.add(item);
+        System.out.println("Received item of RM " + item.getPrice() + " at CartController");
+    }
+
+    public static ArrayList<Gambar> getCart(){
+        return shoppingCart;
     }
 }

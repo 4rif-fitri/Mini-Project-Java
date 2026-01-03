@@ -1,5 +1,6 @@
 package pages;
 
+import controllers.CartController;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -32,6 +33,9 @@ public class CartPage extends JPanel {
                 content.setBorder(BorderFactory.createEmptyBorder(GAP, GAP, GAP, GAP));
                 //content.setBorder(BorderFactory.);
 
+                    for (Gambar item : CartController.getCart()) {
+			            //content.add(new modelboximran(item));
+		            }
 
                     JPanel box = new JPanel();
                     box.setBackground(Color.decode("#d9d9d9"));
@@ -89,7 +93,7 @@ public class CartPage extends JPanel {
                 panelCheckOut.setBackground(Color.decode("#b02323"));
                 panelCheckOut.setPreferredSize(new Dimension(GD.W, 50));
                 panelCheckOut.setLayout(new FlowLayout(FlowLayout.RIGHT));
-                    JLabel totalPrice = new JLabel("RM 1000");
+                    JLabel totalPrice = new JLabel("RM " + getCartTotal());
                     totalPrice.setForeground(Color.white);
                     JButton buttonCheckOut = new JButton("CheckOut");
                 panelCheckOut.add(totalPrice);
@@ -102,4 +106,12 @@ public class CartPage extends JPanel {
                 
             
         }
+    
+    private double getCartTotal(){
+        double total = 0;
+        for (Gambar item : CartController.getCart()) {
+            total += item.getPrice();
+		}
+        return total;
+    }
 }

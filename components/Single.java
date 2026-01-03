@@ -78,6 +78,7 @@ public class Single extends JFrame {
 				JButton addToCart = new JButton("Add To Cart");
 				addToCart.addActionListener(e->{
 					CartController.addToCart(item);
+					System.out.println("Sent item of RM " + item.getPrice() + " to CartController");
 				});
 			panel3.add(price);
 			panel3.add(addToCart);
