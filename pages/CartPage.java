@@ -32,7 +32,7 @@ public class CartPage extends JPanel {
                 //content.setBorder(BorderFactory.);
 
 
-                
+                //ade tak ni
                 content.add(new CartBox());
                 content.add(new CartBox());
                 content.add(new CartBox());
