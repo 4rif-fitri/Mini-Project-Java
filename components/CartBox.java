@@ -26,7 +26,7 @@ public class CartBox extends JPanel{
                 JLabel title = new JLabel("Pizza on a cup");
                 title.setFont(new Font("Ariel", Font.BOLD, 27));
                 JLabel category = new JLabel("Painting");
-                JLabel price = new JLabel("RM 10.00");
+                JLabel price = new JLabel("RM " + item.getPrice());
             panelWestBox.add(title);
             panelWestBox.add(category);
             panelWestBox.add(price);

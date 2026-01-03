@@ -39,6 +39,7 @@ public class Main {
 		CartPage cartPage = new CartPage(globalData);
 
 		globalData.updateAlamatOfPages(category, picturesByCategory);
+		globalData.updateAlamatOfControllers(cart, data);
 		
 						//    panel , Key
 		cardPanel.add(home, HOME); // add page home

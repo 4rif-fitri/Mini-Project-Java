@@ -1,5 +1,6 @@
 package models;
 import controllers.CartController;
+import controllers.GambarController;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 import pages.*;
@@ -8,6 +9,8 @@ public class GlobalData {
     public final static int W = 960;
     public final static int H = 540;
     
+    private static CartController cartController;
+    private static GambarController gambarController;
     private CartPage cartPage;
     private Category category;
     private GallaryAll gallaryAll;
@@ -23,6 +26,10 @@ public class GlobalData {
         this.cardPanel = cardPanel;
     }
 
+    public void updateAlamatOfControllers(CartController cartCont, GambarController gambarCont){
+        cartController = cartCont;
+        gambarController = gambarCont;
+    }
     public void updateAlamatOfPages(Category category, PicturesByCategory byCategroy){
         this.category = category;
         this.picturesByCategory = byCategroy;
@@ -38,5 +45,9 @@ public class GlobalData {
 
     public static void updateCart(){
         CartPage.loadCartPage();
+    }
+
+    public static void sendArtToRemove(Gambar item){
+        gambarController.removeArt(item);
     }
 }
