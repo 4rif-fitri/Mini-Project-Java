@@ -9,13 +9,13 @@ public class GlobalData {
     public final static int W = 960;
     public final static int H = 540;
     
-    private static CartController cartController;
-    private static GambarController gambarController;
-    private CartPage cartPage;
-    private Category category;
-    private GallaryAll gallaryAll;
-    private Home home;
-    private PicturesByCategory picturesByCategory;
+    public static CartController cartController;
+    public static GambarController gambarController;
+    public static CartPage cartPage;
+    public static Category category;
+    public static GallaryAll gallaryAll;
+    public static Home home;
+    public static PicturesByCategory picturesByCategory;
     public CardLayout cardLayout;
     public JPanel cardPanel;
     
@@ -30,9 +30,10 @@ public class GlobalData {
         cartController = cartCont;
         gambarController = gambarCont;
     }
-    public void updateAlamatOfPages(Category category, PicturesByCategory byCategroy){
+    public void updateAlamatOfPages(Category category, GallaryAll all, PicturesByCategory byCategroy){
         this.category = category;
         this.picturesByCategory = byCategroy;
+        this.gallaryAll = all;
     }
 
     public void sendSelectedCategory(String selectedCategory){
@@ -43,11 +44,11 @@ public class GlobalData {
         CartController.addToCart(gambar);
     }
 
-    public static void updateCart(){
+    public static void refreshCart(){
         CartPage.loadCartPage();
     }
 
-    public static void sendArtToRemove(Gambar item){
-        gambarController.removeArt(item);
+    public static void refreshGallaryAll(){
+        gallaryAll.loadAll();
     }
 }

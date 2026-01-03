@@ -181,22 +181,4 @@ public class GambarController {
 			default: return getAll();
 		}
 	}
-
-	public void removeArt(Gambar item){
-		All.remove(item);
-		switch (item.getCatagory()){
-			case "Painting": Painting.remove(item); break;
-			case "NFT Art": NFTArt.remove(item); break;
-			case "Drawing": Drawing.remove(item); break;
-			case "Photography": Photography.remove(item); break;
-			case "Abstract Art": AbstractArt.remove(item); break;
-			case "Pop Art": PopArt.remove(item); break;
-			case "Digital Art": DigiArt.remove(item); break;
-			case "Traditional Art": TradArt.remove(item); break;
-			case "Sculpture": Sculpture.remove(item); break;
-			default: System.out.println("something wrong with removing art from category"); break;
-		}
-		System.out.println("removed art from gallery");
-	}
-
 }

@@ -29,7 +29,10 @@ public class Navbar extends JPanel {
 
 			if (e.getStateChange() == ItemEvent.SELECTED) {
 				String key = (String) e.getItem();
-				if (key == "CART") GlobalData.updateCart();
+				switch (key){
+					case "CART": GlobalData.refreshCart(); break;
+					case "GALLARY": GlobalData.refreshGallaryAll(); break;
+				}
 
 				cardLayout.show(cardPanel, key);
 				nav.setSelectedIndex(0);

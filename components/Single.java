@@ -77,8 +77,9 @@ public class Single extends JFrame {
 				JLabel price = new JLabel("RM " + item.getPrice());
 				JButton addToCart = new JButton("Add To Cart");
 				addToCart.addActionListener(e->{
+					// tambah validation sikit
+					item.setCart(true);
 					CartController.addToCart(item);
-					GlobalData.sendArtToRemove(item);
 				});
 			panel3.add(price);
 			panel3.add(addToCart);

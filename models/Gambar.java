@@ -41,7 +41,11 @@ public class Gambar  {
 		return url;
 	}
 
-
+	public boolean isCart() {
+		return isCart;
+	}
 	
-
+	public void setCart(boolean b) {
+		isCart = b;
+	}
 }

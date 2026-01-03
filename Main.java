@@ -31,15 +31,15 @@ public class Main {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		GlobalData globalData = new GlobalData(cardLayout, cardPanel);
-		
+		globalData.updateAlamatOfControllers(cart, data);
+
 		Home home = new Home();
 		GallaryAll gallaryAll = new GallaryAll(cardLayout, cardPanel, data);
 		Category category = new Category(globalData);
 		PicturesByCategory picturesByCategory = new PicturesByCategory(data, globalData);
 		CartPage cartPage = new CartPage(globalData);
 
-		globalData.updateAlamatOfPages(category, picturesByCategory);
-		globalData.updateAlamatOfControllers(cart, data);
+		globalData.updateAlamatOfPages(category, gallaryAll, picturesByCategory);
 		
 						//    panel , Key
 		cardPanel.add(home, HOME); // add page home
