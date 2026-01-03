@@ -23,9 +23,9 @@ public class CartBox extends JPanel{
             panelWestBox.setPreferredSize(new Dimension(GlobalData.W * 7/10, HBOX));
             panelWestBox.setLayout(new GridLayout(3, 1));
             panelWestBox.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-                JLabel title = new JLabel("Pizza on a cup");
+                JLabel title = new JLabel(item.getName());
                 title.setFont(new Font("Ariel", Font.BOLD, 27));
-                JLabel category = new JLabel("Painting");
+                JLabel category = new JLabel(item.getCatagory());
                 JLabel price = new JLabel("RM " + item.getPrice());
             panelWestBox.add(title);
             panelWestBox.add(category);
