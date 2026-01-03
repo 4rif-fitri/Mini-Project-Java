@@ -1,5 +1,6 @@
 package components;
 
+import controllers.CartController;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -21,7 +22,7 @@ public class Single extends JFrame {
 	public final static int WGAM = W * 3/10;
 	public final static int HGAM = WGAM * 6/4;
 	
-	public Single(Gambar item, String src) { //get the url from img folder
+	public Single(Gambar item) { //get the url from img folder
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		//this.setLayout(new GridLayout(1, 2));
@@ -36,7 +37,7 @@ public class Single extends JFrame {
 		panelGambar.setBackground(Color.decode("#b02323"));
 
 		JLabel gambar = new JLabel();
-		gambar.setIcon(new ImageIcon(getClass().getResource(src)));
+		gambar.setIcon(new ImageIcon(getClass().getResource(item.getUrl())));
 		//label.setText("pizza");
 		gambar.setPreferredSize(new Dimension(WGAM, HGAM));
 		gambar.setBorder(new LineBorder(Color.decode("#ffbf00"), 10));
@@ -75,6 +76,9 @@ public class Single extends JFrame {
 			panel3.setLayout(new GridLayout(1, 2));
 				JLabel price = new JLabel("RM " + item.getPrice());
 				JButton addToCart = new JButton("Add To Cart");
+				addToCart.addActionListener(e->{
+					CartController.addToCart(item);
+				});
 			panel3.add(price);
 			panel3.add(addToCart);
 

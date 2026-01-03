@@ -1,4 +1,5 @@
 import components.Navbar;
+import controllers.CartController;
 import controllers.GambarController;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
@@ -22,6 +23,7 @@ public class Main {
 	final static String SINGLE = "SINGLE";
 	final static String CART = "CART";
 	GambarController data = new GambarController();
+	CartController cart = new CartController();
 
 	public Main() {
 		frame.setVisible(true);

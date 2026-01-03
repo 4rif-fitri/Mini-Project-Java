@@ -1,4 +1,5 @@
 package models;
+import controllers.CartController;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 import pages.*;
@@ -29,5 +30,9 @@ public class GlobalData {
 
     public void sendSelectedCategory(String selectedCategory){
         picturesByCategory.loadSelectedCategory(selectedCategory);
+    }
+
+    public static void sendToCart(Gambar gambar){
+        CartController.addToCart(gambar);
     }
 }
